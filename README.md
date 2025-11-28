@@ -60,13 +60,15 @@ Then visit `http://localhost:8080` in your browser.
 
 ## Deployment (Cloudflare Pages)
 
+1. Go to **Workers & Pages** → **Create** → **Pages** tab → **Connect to Git**
+2. Select your GitHub repository
+
 Build configuration:
 
 | Setting | Value |
 |---------|-------|
+| Framework preset | `None` |
 | Build command | `exit 0` |
-| Deploy command | `exit 0` |
-| Non-production branch deploy command | `exit 0` |
 | Build output directory | `.` |
 
 ## Contributing
