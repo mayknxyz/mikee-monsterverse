@@ -58,6 +58,17 @@ Then visit `http://localhost:8080` in your browser.
 3. Create an `index.html` file for the monster's page
 4. Update the category index page to include the new monster
 
+## Deployment (Cloudflare Pages)
+
+Build configuration:
+
+| Setting | Value |
+|---------|-------|
+| Build command | `exit 0` |
+| Deploy command | `exit 0` |
+| Non-production branch deploy command | `exit 0` |
+| Build output directory | `.` |
+
 ## Contributing
 
 Contributions are welcome! Whether you want to fix a bug, improve the styling, or suggest new features — feel free to open an issue or submit a pull request.
