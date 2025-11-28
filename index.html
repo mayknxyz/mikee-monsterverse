@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<!--
+==========================================================================
+MonsterVerse - Homepage
+==========================================================================
+
+Welcome to the MonsterVerse website source code!
+
+This is an HTML file - it defines the STRUCTURE of the webpage.
+Think of HTML as the skeleton or blueprint of a website.
+
+The <!DOCTYPE html> declaration tells the browser this is an HTML5 document.
+HTML5 is the latest version of HTML (as of 2024).
+
+==========================================================================
+-->
+<html lang="en" dir="ltr" class="dark">
+<!--
+<html> is the root element - everything else goes inside it.
+
+Attributes explained:
+- lang="en" : The page is in English (helps screen readers and search engines)
+- dir="ltr" : Text direction is left-to-right (use "rtl" for Arabic, Hebrew, etc.)
+- class="dark" : We're using dark mode styling
+-->
+
+<head>
+    <!--
+    The <head> section contains METADATA about the page.
+    Nothing in <head> is visible on the page itself!
+    It's information FOR the browser and search engines.
+    -->
+
+    <!-- Character encoding - UTF-8 supports emojis and international characters -->
+    <meta charset="UTF-8">
+
+    <!-- Make the page responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Page title - shows in browser tab and search results -->
+    <title>MonsterVerse</title>
+
+    <!-- Description for search engines (appears in Google results) -->
+    <meta name="description" content="Welcome to the world of kaijus! Where artificial intelligence breathes life into colossal creatures and epic destruction.">
+
+    <!-- Tell search engines to index this page -->
+    <meta name="robots" content="index, follow">
+
+    <!-- Favicon - the small icon in the browser tab -->
+    <link rel="icon" href="/images/favicon.svg" type="image/svg+xml">
+    <link rel="shortcut icon" href="/images/favicon.ico">
+    <link rel="apple-touch-icon" href="/images/apple-touch-icon.png" sizes="180x180">
+
+    <!--
+    Link to our CSS stylesheet
+    This is where all the visual styling comes from!
+    -->
+    <link rel="stylesheet" href="/styles.css">
+
+    <!--
+    Open Graph tags - control how the page looks when shared on social media
+    (Facebook, Twitter, LinkedIn, etc.)
+    -->
+    <meta property="og:title" content="Mikee's MonsterVerse">
+    <meta property="og:description" content="Welcome to the world of kaijus! Where AI breathes life into colossal creatures.">
+    <meta property="og:url" content="https://monsterverse.mikeenavales.xyz">
+    <meta property="og:type" content="website">
+    <meta property="og:site_name" content="Mikee's MonsterVerse">
+    <meta property="og:image" content="https://monsterverse.mikeenavales.xyz/images/og-image.png">
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Mikee's MonsterVerse">
+    <meta name="twitter:description" content="Welcome to the world of kaijus! Where AI breathes life into colossal creatures.">
+    <meta name="twitter:image" content="https://monsterverse.mikeenavales.xyz/images/og-image.png">
+</head>
+
+<body>
+    <!--
+    The <body> contains everything VISIBLE on the page.
+    We'll structure it using semantic HTML tags:
+    - <header> : Top section with navigation
+    - <main>   : The main content of the page
+    - <footer> : Bottom section with links and copyright
+    -->
+
+    <!--
+    SKIP TO CONTENT LINK (Accessibility)
+    This link is hidden until focused with keyboard (Tab key).
+    It allows keyboard users to skip the navigation and jump to main content.
+    -->
+    <a href="#main-content" class="skip-to-content">Skip to content</a>
+
+    <!--
+    ==========================================================================
+    ANNOUNCEMENT BAR
+    A thin bar at the very top for important messages/promotions.
+    Hidden on mobile (shows on tablet and up).
+    ==========================================================================
+    -->
+    <div class="announcement-bar">
+        <span>The Glitch in the Godzilla Matrix</span>
+    </div>
+
+    <!--
+    ==========================================================================
+    HEADER
+    The top navigation area. Uses the <header> semantic tag.
+    Semantic tags tell the browser (and screen readers) what the content IS.
+    ==========================================================================
+    -->
+    <header class="header">
+        <div class="header-content">
+            <!--
+            LOGO
+            Links back to homepage. The span contains the site name.
+            -->
+            <a href="/" class="logo">
+                <span>👾 MonsterVerse</span>
+            </a>
+
+            <!--
+            DESKTOP NAVIGATION
+            Hidden on mobile, visible on larger screens (md: breakpoint).
+            -->
+            <nav class="main-nav" aria-label="Main navigation">
+                <ul class="nav-links">
+                    <li><a href="/contents/ai-generated">AI-Generated</a></li>
+                    <li><a href="/contents/classics">Classics</a></li>
+                    <li><a href="/contents/my-collection">My Collection</a></li>
+                </ul>
+            </nav>
+
+            <!--
+            MOBILE MENU BUTTON (Hamburger icon)
+            Uses HTML popover attribute - pure HTML, no JavaScript needed!
+            The popovertarget="mobile-menu" connects this button to the nav below.
+            -->
+            <button class="menu-toggle" popovertarget="mobile-menu" aria-label="Open menu">
+                <span class="menu-icon">☰</span>
+            </button>
+
+            <!--
+            MOBILE NAVIGATION (Popover)
+            The popover attribute makes this show/hide when the button is clicked.
+            No JavaScript required - it's built into modern browsers!
+            -->
+            <nav class="mobile-nav" id="mobile-menu" popover aria-label="Mobile navigation">
+                <ul class="mobile-nav-links">
+                    <li><a href="/contents/ai-generated">AI-Generated</a></li>
+                    <li><a href="/contents/classics">Classics</a></li>
+                    <li><a href="/contents/my-collection">My Collection</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <!--
+    ==========================================================================
+    MAIN CONTENT
+    The <main> tag indicates the primary content of the page.
+    Each page should have exactly ONE <main> element.
+    ==========================================================================
+    -->
+    <main id="main-content">
+        <!--
+        HERO SECTION
+        The big eye-catching area at the top of the homepage.
+        Uses <section> - a semantic tag for thematic content groupings.
+        -->
+        <section class="hero">
+            <div class="container">
+                <div class="hero-content">
+                    <!--
+                    Main headline - uses <h1> tag
+                    Each page should have exactly ONE <h1> - it's the most important heading!
+                    -->
+                    <h1 class="hero-title">
+                        Welcome to the world of k<span class="accent">AI</span>jus!
+                    </h1>
+
+                    <!--
+                    Description paragraph
+                    <p> is for paragraphs of text
+                    -->
+                    <p class="hero-description">
+                        Where artificial intelligence breathes life into colossal creatures and epic destruction.
+                        Explore a gallery of awe-inspiring and terrifying kaiju, all imagined and brought to life by the power of AI.
+                    </p>
+                </div>
+
+                <!--
+                Hero image
+                Always include alt="" text for accessibility!
+                -->
+                <div class="hero-image">
+                    <img
+                        src="https://imagedelivery.net/RGXaSpJxHDcZsszKAQYjdg/6372bb72-576f-4feb-f2e8-f9e3f9534500/public"
+                        alt="Godzilla vs Kong - epic kaiju battle"
+                        width="1024"
+                        height="576"
+                        loading="eager"
+                    >
+                </div>
+            </div>
+        </section>
+
+        <!--
+        SECTION TITLE
+        A simple centered heading to introduce the next section.
+        <h2> is a second-level heading - less important than <h1>.
+        -->
+        <h2 class="section-title">Our Database is growing every day</h2>
+
+        <!--
+        STATS SECTION
+        Shows numbers/statistics in a visually appealing way.
+        -->
+        <section class="stats-section">
+            <div class="container">
+                <div class="stats-container">
+                    <div class="stat-item">
+                        <div class="stat-number">12</div>
+                        <div class="stat-label">AI-Generated</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">1</div>
+                        <div class="stat-label">Classics</div>
+                    </div>
+                    <div class="stat-item">
+                        <div class="stat-number">0</div>
+                        <div class="stat-label">My Collection</div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!--
+    ==========================================================================
+    FOOTER
+    The bottom section of the page with links and copyright info.
+    The <footer> semantic tag indicates this is footer content.
+    ==========================================================================
+    -->
+    <footer class="footer">
+        <div class="footer-content">
+            <!--
+            Footer grid layout
+            Uses CSS Grid to create multiple columns of links.
+            -->
+            <div class="footer-grid">
+                <!-- Brand column -->
+                <div class="footer-brand">
+                    <a href="/" class="logo"><span>👾 MonsterVerse</span></a>
+                </div>
+
+                <!-- Link columns -->
+                <div class="footer-column">
+                    <div class="footer-column-title">My Top 5 AI-Generated</div>
+                    <ul>
+                        <li><a href="/contents/ai-generated/nyxos">Nyxos</a></li>
+                        <li><a href="/contents/ai-generated/pip">Pip</a></li>
+                        <li><a href="/contents/ai-generated/volcorg">Volcorg</a></li>
+                        <li><a href="/contents/ai-generated/fartasma">Fartasma</a></li>
+                        <li><a href="/20250425-umbraxen">UmbraXen</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+                    <div class="footer-column-title">My Top 5 Classics</div>
+                    <ul>
+                        <li><a href="/contents/classics/kingkong">King Kong</a></li>
+                        <li><a href="#">monster-2</a></li>
+                        <li><a href="#">monster-3</a></li>
+                        <li><a href="#">monster-4</a></li>
+                        <li><a href="#">monster-5</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-column">
+
+                <div class="footer-column">
+                    <div class="footer-column-title">My Top 5 Collection</div>
+                    <ul>
+                        <li><a href="#">monster-1</a></li>
+                        <li><a href="#">monster-2</a></li>
+                        <li><a href="#">monster-3</a></li>
+                        <li><a href="#">monster-4</a></li>
+                        <li><a href="#">monster-5</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- Footer bottom with copyright -->
+        <div class="footer-bottom">
+            <div class="footer-copyright">
+                Conceptualized by <a href="https://mikeenavales.xyz" target="_blank">me.</a>
+                Developed by my <a href="https://mikenavales.xyz" target="_blank">daddy.</a>
+                
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
+<!--
+==========================================================================
+CONGRATULATIONS! You've read through a complete HTML file!
+
+KEY CONCEPTS YOU LEARNED:
+1. HTML documents have a <head> (metadata) and <body> (visible content)
+2. Semantic tags like <header>, <main>, <nav>, <section>, <footer> describe content
+3. Headings go from <h1> (most important) to <h6> (least important)
+4. Links use <a href="..."> tags
+5. Images use <img src="..." alt="..."> tags
+6. CSS styles are linked with <link rel="stylesheet" href="...">
+7. The HTML popover attribute creates interactive menus without JavaScript!
+
+NEXT STEPS TO LEARN MORE:
+- Look at styles.css to see how CSS styles the page
+- Try changing some text and see what happens!
+- Learn about CSS Grid and Flexbox for layouts
+==========================================================================
+-->
