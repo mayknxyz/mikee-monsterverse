@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [0.2.0] - 2025-11-28
+
+### Added
+
+- Cloudflare Pages deployment config (`wrangler.jsonc`)
+
+### Changed
+
+- Simplified license to CC BY-NC 4.0 for entire project (code + content)
+- Updated README badges and license section
+
 ## [0.1.0] - 2025-11-28
 
 ### Added
@@ -25,9 +36,9 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Skip-to-content accessibility link for keyboard navigation
 - SEO files: `robots.txt` and `sitemap.xml`
 - Open Graph and Twitter Card meta tags for social sharing
-- MIT license for website code (content remains copyrighted)
 - Project documentation: `README.md` with story and setup instructions
 - Content tracking: `TRACKER.md` for monster inventory
 
-[Unreleased]: https://github.com/user/mikee-monsterverse/compare/v0.1.0...HEAD
-[0.1.0]: https://github.com/user/mikee-monsterverse/releases/tag/v0.1.0
+[Unreleased]: https://github.com/mayknxyz/mikee-monsterverse/compare/v0.2.0...HEAD
+[0.2.0]: https://github.com/mayknxyz/mikee-monsterverse/compare/v0.1.0...v0.2.0
+[0.1.0]: https://github.com/mayknxyz/mikee-monsterverse/releases/tag/v0.1.0
